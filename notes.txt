@@ -91,3 +91,66 @@ monitoring
 - monitoring tools e.g. Prometheus, Grafana
 continuous retraining
 - automated retraining of models based on triggers or regular frequency
+
+CI, build, test pipeline:
+INPUTS:
+- test
+    - line and unit tests for code coverage, code quality
+    - publish test results
+- build
+    - include dependencies (libraries + versions)
+    - build images
+- publish
+    - publish the pipeline
+OUTPUTS:
+- packages
+- executables
+- images
+
+MLOps creates a shared language among the extended team and invites automation
+- data scientists can then focus on more research and experimentation while having the overall visibility of the deployed models
+- ML engineers get less resistance from understanding the experiment; reproducibility is no longer a problem
+- application developers do not need to change the code everytime the model changes; model and application are decoupled from each other
+- risk & compliance team can streamline internal processes since complete lineage is maintained for easy audits
+- clients can make better business decisions when they have the updated model giving predictions
+
+DevOps VS MLOps
+- more diverse teams
+- iterative development cycle
+- versioning of code, data, features, environments
+- projects are compute intensive
+- CI comprises testing and validation of code and data
+- CD comprises deploying multiple pipelines
+- monitor throughput latency, CPU utilizations, model accuracy, data drift, features along with basic health checks
+- CI, CD, CT
+
+Maturity Levels in MLOps
+- Level 0
+    - people: data scientists are siloed
+    - data gathering: data scattered everywhere and gathered manually
+    - development: manual activities that are passed on to operationalize
+    - model release: manual and done by data scientists
+    - no CI/CD
+    - app integration and testing: heavily reliant on data scientist experise to implement
+    - monitoring: lacks active monitoring
+- Level 1
+    - people: data scientists work directly with engineers to convert experiment to repeatable scripts or jobs
+    - data gathering: data in databases, pipelines are created for gathering, analysis, and pre-processing
+    - development: steps of ML experiment are orchestrated, modularized, and re-usable code is prepared
+    - model release: continuous delivery of model
+    - no CI/CD but CT pipeline is deployed into production using a semi-manual dpeloyment strategy
+    - app integration and testing: unit and integration tests for each model release, less reliant on data scientist's expertise
+    - monitoring: active monitoring and retraining triggers are put in place    
+- Level 2 (= Level 1 ++)
+    - data gathering: strict data governance, secure APIs, role-based data access
+    - CI for test, build, package
+    - CD pipelines
+    - app integration and testing: application code itself contains unit and integration tests for each model release
+(a single commit can trigger the whole CI/CD pipeline)
+
+Maturity levels can help:
+- estimate scope of work
+- establish realistic success criteria
+- identify deliverables
+
+MLOps Stack
