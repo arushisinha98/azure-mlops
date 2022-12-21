@@ -154,3 +154,69 @@ Maturity levels can help:
 - identify deliverables
 
 MLOps Stack
+ML >> dev >> ops
+- data garthering and preparation
+    - gather, clean, transform batch and streaming data pipelines
+- source control
+    - version code, data, artifacts, etc.
+- experimentation
+    - data scientist friendly
+    - host notebooks for development
+- hyperparameter tuning
+    - tuning framework to select the best combination
+- distributed model training
+    - auto-scaling and distributed model training
+    - CI/CD tools for scheduling, task queuing
+    - selection of resuable components
+- autoML
+    - automated model training
+- deployment
+    - automated deployment using container services (e.g. Docker, Kubernetes)
+- model registry
+    - register: training data, model type, artifacts, training parameters, hyperparameters, performance metrics
+- feature store
+    - to facilitate collaboration b/w teams
+    - reduce duplication
+    - reduce feature engineering cost per model
+- monitoring
+    - should give real-time performance view of deployed models
+    - should have alert mechanisms
+- governance
+    - governance services to control access, implement policy, and track model activity
+    - capability to track end-to-end trail of ML assets
+- compliance & audit services
+    - authorization and authentication
+(+ fall-back support, easy scale out, canary A/B framework, co-locate multiple models, security)
+
+platforms: Pachyderm, Algorithmia, MLflow, Kubeflow, Polyaxon, Valohai, Allegro, Seldom, Terminus DB, Superb AI, Tecton
+Pachyderm = "git for your data" but lacks monitoring entirely
+Algorithmia = deploy, manage, scale
+MLflow = library agnostic but not mature in any area
+Kubeflow = includes data gathering but not mature in any area
+
+questions to ask when choosing MLOps platform:
+- managed or unmanaged solutions for model serving?
+    - managed -- Algorithmia, SageMaker, GoogleML, Paperspace
+    - unmanaged -- Kubeflow, Seldon, Tensorflow
+- security requirements?
+    - critical data -- Algorithmia, Seldon, Tensorflow, Kubeflow
+    - non-critical data -- Cloud MLOps solutions
+- complexity of models?
+    - cloud solutions -- AWS, GCP, Azure
+    - on-premises -- Algorithmia
+- containerization is a must
+    - custom container -- Kubeflow, Seldon
+    - cloud-provider -- Algorithmia, SageMaker, GoogleML
+- CLI VS GUI
+    - CLI -- Seldon, Cortex, Optuna
+    - GUI -- Kubeflow, MLflow, Polyaxon
+- languages and libraries?
+    - no Java support -- Plyaxon, Comet, Optuna
+    - no Onnx support -- Kubeflow, Polyaxon
+- type of ML objective?
+    - traditional ML -- MLflow, Metaflow
+    - deep learning -- Valohai, Allegro
+- specialized platform or end-to-end solution?
+    - focused -- Algorithmia, Pachyderm
+    - end-to-end -- Valohai, Allegro
+    
