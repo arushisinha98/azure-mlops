@@ -35,3 +35,41 @@ ML engineers
 - operationalize model
 - deployment
 
+R&D phase -- mostly carried out by data scientists
+data acquisition >> data preprocessing >> model building >> model training >> model validation
+Operations phase -- mostly carried out by operational team
+package >> compile >> deploy >> release >> monitor
+
+data scientists are often engaged in other activities
+- experiments predominantly carried out in isolation
+- code is often not robust or scalable
+operational team often has many questions when they received the POC created by data scientists
+- what are the required dependencies?
+- what feature parameters is the model trained on?
+- what variable represents model output values?
+- what is the data format to feed to the model?
+- is model production ready?
+
+productionization of a model is not smooth
+- build and train model locally
+- package
+    - compile code
+    - resolve dependencies
+    - run scripts
+- performance
+    - scale out to train larger data sets
+    - evaluate performance on larger data sets
+    - load balancing
+    - add parallelism
+    - data partitioning
+    - take GPU support
+    - model preduction speed
+- instrumentation
+    - versioning, repo management, security, monitoring
+    - versioning of algorithm + data + feature parameters + environment
+    - reproducibility
+- automation
+    - continuous training
+    
+technical debt in ML:
+configuration, data collection, feature extraction, versioning, resource management, process management tools, monitoring, serving infrastructure, analysis tools, ML code (smallest component)
