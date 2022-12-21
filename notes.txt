@@ -73,3 +73,21 @@ productionization of a model is not smooth
     
 technical debt in ML:
 configuration, data collection, feature extraction, versioning, resource management, process management tools, monitoring, serving infrastructure, analysis tools, ML code (smallest component)
+
+MLOps = a culture with a set of principles, guidelines defined in a ML world to seamlessly integrate/automate the development phase with the operational phase
+
+transition fiction
+- use notebook templates that define common functionality (e.g. database connection template, fetching data, etc)
+- proper documentation
+version control system
+- version control system for code, data, environment, and artifacts
+performance
+- leverage distributed computing and containerization tools (e.g. Docker, Kubernetes)
+automation
+- build workflows, CI/CD pipelines
+- MLOps is pipeline centric: put pipelines in production rather than putting a model
+monitoring
+- powerful innovative monitoring tools to monitor data, features, distribution, latency, uptime, memory utilization, etc
+- monitoring tools e.g. Prometheus, Grafana
+continuous retraining
+- automated retraining of models based on triggers or regular frequency
