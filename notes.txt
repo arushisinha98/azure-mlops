@@ -1,0 +1,37 @@
+## Notes from Udemy / learn.gov.sg: MLOps Fundamentals: CI/CD/CT Pipelines of ML with Azure Demo
+
+MLOps = Machine Learning + Operations
+- set of principles and practices to standardize and streamline the machine learning lifecycle management
+- integration b/w development and operational processes
+- teams collaborate to build, automate, test, and monitor the machine learning pipelines
+- based on DevOps principles of continuous integration (CI), continuous delivery (CD), continuous training (CT)
+
+ML >> Dev >> Ops
+(data, design, model) >> (plan, create, package, verify) >> (configure, release, triggers, monitor)
+
+traditional approach to an ML project:
+- business understanding / requirement gathering
+- data acquisition: identify data sources / formats, make source connections, create data lake
+- data wrangling / transformations / pre-processing, exploratory data analysis, data visualization
+- model selection / building / training / testing / validation
+- model deployment (e.g. webservices, API)
+    - model as a service = model is deployed into a framework to provide REST API endpoint
+    - embedded deployment = model is packed into an application / software
+- monitoring
+- model retraining (on the new data)
+
+subject matter experts
+- provide business questions, goals, KPIs to achieve
+- continuously evaluate the model performance
+data scientists
+- algorithm selection
+- build, train, validate model
+- hyperparameter tuning
+data engineers
+- data acquisition, data lake creation
+- data wrangling, cleaning, tranformstion
+- ETL pipelines
+ML engineers
+- operationalize model
+- deployment
+
