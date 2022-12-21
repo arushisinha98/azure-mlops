@@ -220,3 +220,13 @@ questions to ask when choosing MLOps platform:
     - focused -- Algorithmia, Pachyderm
     - end-to-end -- Valohai, Allegro
     
+Demo: diabetes prediction based on diagnostic measurements in dataset
+- Azure ML services (ml.azure.com)
+    - open and flexible framework platform
+    - development tools
+    - automated ML (no-code interfaces)
+    - versioning and profiling (entity management)
+    - role-based access, virtual networks, private links
+    - policies, autid trails, quotas
+    - batch and real-time model serving
+    - CPUs, GPUs, TPUs, FPGA to accelerate learning
